@@ -8,7 +8,7 @@ public class App {
 
         System.out.println("Circulo 1: \n" + c1 + "\n");
         System.out.println("Circulo 2: \n" + c2 + "\n");
-        System.out.println("Área C1: " + c1.Area());
+        System.out.printf("Área C1: %.2f\n",  c1.Area());
 
         c1.Mover(4,2);
         System.out.println("Circulo 1 movido:\n" + c1 + "\n");
