@@ -23,7 +23,7 @@ public Circulo() {
 
 @Override
 public String toString(){
-return String.format ("Centro: %.2f, %.2f \nRaio: %.2f", x,y,raio);
+return String.format ("Centro: %.2f, %.2f Raio: %.2f", x,y,raio);
 }
 
 public void Mover(double moveX, double moveY){
@@ -33,6 +33,11 @@ public void Mover(double moveX, double moveY){
 
     public void Zoom(double zoom){
         this.raio = raio*zoom;
+    }
+
+    public double Area () {
+        return Math.PI * Math.pow(this.raio,2);
+
     }
 
 }
