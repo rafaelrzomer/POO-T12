@@ -1,4 +1,4 @@
-package poo.rafael;
+package CirculosPonto;
 
 public class App {
     public static void main(String[] args) {
