@@ -10,5 +10,19 @@ public class Ponto {
         this.y = y;
 
     }
+
+    public void Mover(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+
+     public void Zoom(double zoom){
+        this.raio = raio*zoom;
+    }
+
+    @Override
+public String toString(){
+return String.format ("Centro: %.2f, %.2f", x,y);
+}
     
 }
