@@ -11,9 +11,9 @@ public class Ponto {
 
     }
 
-    public void Mover(double x, double y){
-        this.x = x;
-        this.y = y;
+    public void Mover(double novoX, double novoY){
+        this.x = novoX;
+        this.y = novoY;
     }
 
      public void Zoom(double zoom){
@@ -21,8 +21,8 @@ public class Ponto {
     }
 
     @Override
-public String toString(){
-return String.format ("Centro: %.2f, %.2f", x,y);
-}
+    public String toString() {
+    return String.format ("Centro: %.2f, %.2f", this.x,this.y);
+    }
     
 }
