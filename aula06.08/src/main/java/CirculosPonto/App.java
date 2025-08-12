@@ -6,8 +6,8 @@ public class App {
         Circulo c1 = new Circulo(2,3,5);
         Circulo c2 = new Circulo();
 
-        System.out.println("Circulo 1: \n" + c1 + "\n");
-        System.out.println("Circulo 2: \n" + c2 + "\n");
+        System.out.println("Circulo 1: \n" + c1() + "\n");
+        System.out.println("Circulo 2: \n" + c2() + "\n");
         System.out.printf("Área C1: %.2f\n",  c1.Area());
 
         c1.Mover(4,2);
@@ -22,9 +22,9 @@ public class App {
         circulos[2] = new Circulo(5,5,3);
 
         System.out.println("Array de circulos: ");
-        for (int i = 0; i< circulos.length; i++){
-            System.out.printf("Circulo %d %s \n",i,circulos[i]);
-        
+        for (Circulo circulo: circulos){
+            System.out.printf(circulo.toString());
+        }
 
 
     }

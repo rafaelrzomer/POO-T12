@@ -2,6 +2,7 @@ package CirculosPonto;
 
 public class Ponto {
 
+    private Ponto centro;
     private double x;
     private double y;
 
@@ -12,13 +13,9 @@ public class Ponto {
     }
 
     public void Mover(double novoX, double novoY){
-        this.x = novoX;
-        this.y = novoY;
+        centro.Mover(novoX,novoY);
     }
 
-     public void Zoom(double zoom){
-        this.raio = raio*zoom;
-    }
 
     @Override
     public String toString() {
