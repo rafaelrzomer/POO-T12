@@ -29,7 +29,7 @@ public double getPreco(){
 
 @Override
 public String toString(){
-    return String.format("Código: %d \nNome: %s \nPreço: %.2f", this.codigo, this.nome, this.preco);
+    return String.format("Código: %d \nNome: %s \nPreço R$: %.2f", this.codigo, this.nome, this.preco);
 }
 
 }
