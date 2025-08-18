@@ -23,7 +23,7 @@ public String getCpf(){
 
 @Override
 public String toString(){
-    return String.format("Nome: %s \nCpf: %s",this.nome, this.cpf);
+    return String.format("Nome: %s \tCpf: %s",this.nome, this.cpf);
 }
 
 }

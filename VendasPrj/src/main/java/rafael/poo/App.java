@@ -4,6 +4,20 @@ package rafael.poo;
 public class App {
     public static void main(String[] args) {
 
+        CadastroCliente cadCliente = new CadastroCliente();
+        cadCliente.cadastrar("Rafael","02543588027");
+        cadCliente.cadastrar("Luzia","12345678900");
+        cadCliente.cadastrar("Debora", "1235251428");
+
+        System.out.println("Clientes cadastrados: ");
+        System.out.println(cadCliente.relatorio());
+
+        Cliente cliente = cadCliente.pesquisa("02543588027");
+        if (cliente == null)
+            System.out.println("Nao existe cliente com esse cpf.");
+            else
+            System.out.println("Achou: \n" + cliente + "\n");
+
         CadastroProdutos cadProd = new CadastroProdutos();
         cadProd.cadastrar(1231,"Lapis",2.99);
         cadProd.cadastrar(1232,"Caneta",3.99);
