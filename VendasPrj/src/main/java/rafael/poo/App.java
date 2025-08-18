@@ -1,5 +1,6 @@
 package rafael.poo;
 
+
 public class App {
     public static void main(String[] args) {
 
@@ -10,9 +11,20 @@ public class App {
 
         CadastroProdutos cadProd = new CadastroProdutos();
 
-        cadProd.cadastrar();
+        cadProd.cadastrar(1231,"Lapis",2.99);
+
+        System.out.println("Produtos cadastrados: ");
+        System.out.println(cadProd.relatorio());
+
+        Produto Prod = cadProd.pesquisa(1231);
+        if (Prod == null)
+        System.out.println("O produto tal nao existe.");
+        else
+        System.out.println("Achou " + Prod);
 
 
+        ItemVenda iv1 = new ItemVenda(10, Prod);
+        System.out.println("ItemVenda: " + iv1.toString());
 
     }
 

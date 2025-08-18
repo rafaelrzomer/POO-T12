@@ -17,18 +17,31 @@ public class CadastroProdutos {
         lista.add(prod);
     }
 
-    public Produto pesquisa(int codigo){
+    public Produto pesquisa(int codigo) {
+       // for (int i = 0; i < lista.size(); i++){
+            //Produto p = lista.get(i);
+            for(Produto p : lista){
+            if (p.getCodigo() == codigo){
+                return p;
+            }
+        }
+        //passei por todos e nao achei
         return null;
     }
 
     public String relatorio(){
         StringBuilder rel = new StringBuilder();
-
         
+         for (int i=0; i<lista.size(); i++) {
+            Produto prod = lista.get(i);
+            rel.append(prod.toString());
+            rel.append("\n");
+
+         }
         return rel.toString();
 
-    }
-
-
     
+
+
+    }
 }
