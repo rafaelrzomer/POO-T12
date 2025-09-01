@@ -47,6 +47,9 @@ public class App {
 
         System.out.println(venda1.fecharVenda());
 
+        // ERRO = nao posso dar new em classes abstratas
+        //Cliente cli3 = new Cliente(3,"jose", "aaa");
+
     }
 
 }

@@ -33,6 +33,11 @@ public class CadastroCliente {
             Cliente cliente = lista.get(i);
             relatorio.append(cliente.toString());
             relatorio.append("\n");
+
+            for (Cliente c : lista){
+                relatorio.append(c.toString());
+                relatorio.append("\n");
+            }
         }
         return relatorio.toString();
     }
