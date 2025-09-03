@@ -1,4 +1,4 @@
-package pucrs.myflight.modelo;
+package rafael.poo;
 
 import java.util.ArrayList;
 

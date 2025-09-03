@@ -1,4 +1,4 @@
-package pucrs.myflight.modelo;
+package rafael.poo;
 
 public class Geo {
 	private double latitude;

@@ -1,4 +1,4 @@
-package pucrs.myflight.consoleApp;
+package rafael.poo;
 
 public class App {
 
