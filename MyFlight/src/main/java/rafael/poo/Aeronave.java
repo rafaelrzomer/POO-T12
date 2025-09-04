@@ -25,6 +25,6 @@ public class Aeronave {
 
 	public String toString(){
 
-		return String.format(descricao + " " + codigo + " capacidade: " + capacidade);
+		return String.format(descricao + " " + codigo + " capacidade: " + capacidade + " passageiros");
 	}
 }
