@@ -14,6 +14,9 @@ public class App {
 		gerenciaAero.Adicionar(boing);
 		gerenciaAero.Adicionar(tecoteco);
 
+		System.out.println(gerenciaAero.toString());
+
+		/* 
 		System.out.println("Lista de Aeronaves");
 		for (Aeronave aero : gerenciaAero.listarTodas()){
 			System.out.println(aero.toString());
@@ -22,7 +25,7 @@ public class App {
 		System.out.println("Buscando aeronave codigo 353");
 		Aeronave buscou = gerenciaAero.buscarPorCodigo("353");
 		System.out.println(buscou);
-
+		*/
 
 
 		

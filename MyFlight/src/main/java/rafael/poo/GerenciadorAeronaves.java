@@ -35,6 +35,15 @@ public class GerenciadorAeronaves {
 
         return null;
     }
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder("Lista de Aeronaves\n");
+        for (Aeronave aero: aeronaves){
+            sb.append(aero.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
 
     
 
