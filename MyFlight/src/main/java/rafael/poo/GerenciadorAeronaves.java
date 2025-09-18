@@ -7,7 +7,6 @@ public class GerenciadorAeronaves {
     private ArrayList<Aeronave> aeronaves;
 
     public GerenciadorAeronaves(){
-
         this.aeronaves = new ArrayList<>();
     }
 
@@ -26,13 +25,6 @@ public class GerenciadorAeronaves {
                 return aero;
             }
         }
-
-        for (int i = 0; i < aeronaves.size(); i ++){
-            if (aeronaves.get(i).getCodigo().equals(cod)){
-                return aeronaves.get(i);
-            }
-        }
-
         return null;
     }
 

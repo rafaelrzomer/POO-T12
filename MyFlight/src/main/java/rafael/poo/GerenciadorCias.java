@@ -8,6 +8,46 @@ public class GerenciadorCias {
 	public GerenciadorCias() {
 		empresas = new ArrayList<>();
 	}
+
+	public void adicionar(CiaAerea cia){
+		empresas.add(cia);
+	}
+
+	public ArrayList<CiaAerea> listarTodas(){
+		return new ArrayList<>(empresas);
+
+	}
+
+	public CiaAerea buscarCodigo(String cod){
+
+		for (CiaAerea cia: empresas){
+			if(cia.getCodigo().equals(cod)){
+				return cia;
+			}
+		}
+		return null;
+	}
+
+	public CiaAerea buscarNome(String nome){
+
+		for (CiaAerea cia: empresas){
+			if (cia.getNome().equals(nome)){
+				return cia;
+			}
+			
+		}
+		return null;
+	}
+
+
+
+
+
+
+
+
+
+
  /* 
 	public void carregaDados() throws IOException{
 		Path path2 = Paths.get("dados.txt");
