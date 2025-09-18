@@ -16,6 +16,8 @@ public class App {
 
 		System.out.println(gerenciaAero.toString());
 
+
+		
 		/* 
 		System.out.println("Lista de Aeronaves");
 		for (Aeronave aero : gerenciaAero.listarTodas()){
