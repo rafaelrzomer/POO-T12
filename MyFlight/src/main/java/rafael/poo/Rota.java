@@ -28,4 +28,8 @@ public class Rota {
 	public Aeronave getAeronave() {
 		return aeronave;
 	}
+
+	public String toString(){
+		return cia.getCodigo()
+	}
 }

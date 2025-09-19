@@ -14,25 +14,31 @@ public class App {
 		GerenciadorCias gerenciaCia = new GerenciadorCias();
 		GerenciadorAeroportos gerenciaAeroporto = new GerenciadorAeroportos();
 
-		Aeronave boing = new Aeronave("353", "Boing",150);
-		Aeronave tecoteco = new Aeronave("111", "Tecoteco",30);
-		CiaAerea c1 = new CiaAerea("111", "GOL");
+		Aeronave boing = new Aeronave("733", "Boeing 737-300",140);
+		Aeronave airbus = new Aeronave("380", "Airbus Industrie A380",644);
+		CiaAerea c1 = new CiaAerea("G3", "Gol Linhas Aéreas SA");
+		CiaAerea c2 = new CiaAerea("JJ", "LATAM Linhas Aéreas");
 		Geo geoSalgadoF = new Geo(-29.9939, -51.1711);
 		Geo geoGuarulhos = new Geo(-23.4356, -46.4731);
-		Aeroporto SalgadoFilho = new Aeroporto("321", "GUARULHOS",geoSalgadoF);
-		Aeroporto Guarulhos = new Aeroporto("653", "santos dumon", geoGuarulhos);
+		Aeroporto SalgadoFilho = new Aeroporto("POA", "Salgado Filho Intl Apt",geoSalgadoF);
+		Aeroporto Guarulhos = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", geoGuarulhos);
 
 		Rota r1 = new Rota(c1, SalgadoFilho, Guarulhos, boing);
+		Rota r2 = new Rota(c2, Guarulhos, SalgadoFilho, airbus);
 
 		Voo teste = new Voo(r1,Duration.ofHours(1));
 		Voo teste2 = new Voo(r1, LocalDateTime.now(),Duration.ofHours(2));
+		VooEscalas ve1 = new VooEscalas(r1, r2, LocalDateTime.now(), Duration.ofHours(1));  
 
-		System.out.println(teste.toString());
+
+
+		System.out.println(ve1.toString());
 		System.out.println(Geo.calculaDistancia(geoSalgadoF, geoGuarulhos));
+		System.out.println(geoSalgadoF.calculaDistancia(geoGuarulhos));
+		System.out.println(CiaAerea.getTotalDeCias());
 
 		gerenciaVoo.Adicionar(teste);
 		gerenciaAero.Adicionar(boing);
-		gerenciaAero.Adicionar(tecoteco);
 
 		System.out.println(gerenciaAero.toString());
 

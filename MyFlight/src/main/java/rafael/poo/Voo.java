@@ -16,7 +16,7 @@ public class Voo {
 		this.rota = rota;
 		this.datahora = datahora;
 		this.duracao = duracao;
-		this.status = Status.CONFIRMADO; // default é confirmado
+		this.status = Status.CONFIRMADO;
 	}
 
 	public Voo(Rota rota, Duration duracao){
@@ -24,7 +24,13 @@ public class Voo {
 		this.rota = rota;
 		this.duracao = duracao;
 		this.datahora = LocalDateTime.of(2016,8,12,12,00,00);
+		this.status = Status.CONFIRMADO;
+	}
 
+	@Override
+	public String toString(){
+		return getStatus() + " Voo: " + getRota().getCia().getCodigo() + " de: " + getRota().getOrigem().getCodigo() +
+		" para: " + getRota().getDestino().getCodigo() + " dia: " + getDatahora();
 	}
 	
 	public Rota getRota() {
