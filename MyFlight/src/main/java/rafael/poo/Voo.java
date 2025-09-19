@@ -2,7 +2,7 @@ package rafael.poo;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-
+import java.time.format.DateTimeFormatter;
 public class Voo {
 	
 	public enum Status { CONFIRMADO, ATRASADO, CANCELADO };
@@ -29,8 +29,9 @@ public class Voo {
 
 	@Override
 	public String toString(){
+		DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		return getStatus() + " Voo: " + getRota().getCia().getCodigo() + " de: " + getRota().getOrigem().getCodigo() +
-		" para: " + getRota().getDestino().getCodigo() + " dia: " + getDatahora();
+		" para: " + getRota().getDestino().getCodigo() + " dia: " + getDatahora().format(formatador);
 	}
 	
 	public Rota getRota() {

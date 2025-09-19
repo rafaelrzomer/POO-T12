@@ -17,7 +17,14 @@ public class VooVariasEscalas extends Voo {
         return escalas;
     }
 
-
+    public String toString(){
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append(" com escalas em: ");
+        for (Rota r: escalas){
+            sb.append("->" + r.getDestino().getCodigo());
+        }
+        return sb.toString();
+    }
     
 
 }
